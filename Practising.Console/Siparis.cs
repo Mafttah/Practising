@@ -19,20 +19,20 @@ public class Siparis
     public decimal ToplamTutariHesapla()
     {
         decimal toplam = 0;
-        foreach (var u in Urunler)
-            toplam += u.Fiyat;
+        foreach (var urun in Urunler)
+            toplam += urun.Fiyat;
         return toplam;
     }
 
     public void SiparisOzetiniYazdir()
     {
         Console.WriteLine($"Sipariş No: {SiparisNo}");
-        Console.WriteLine($"Müşteri   : {SiparisiVerenMusteri.MusteriAdiSoyadi}");
-        Console.WriteLine("Ürünler:");
+        Console.WriteLine($"Müşteri: {SiparisiVerenMusteri.MusteriAdiSoyadi}");
+        Console.WriteLine("Ürünler: ");
         foreach (var u in Urunler)
-            Console.WriteLine($" - {u.UrunAdi} : {u.Fiyat} TL");
+            Console.WriteLine($"{u.UrunAdi}: {u.Fiyat} £");
 
-        Console.WriteLine($"Toplam Tutar: {ToplamTutariHesapla()} TL");
+        Console.WriteLine($"Toplam Tutar: {ToplamTutariHesapla()} £");
     }
 }
 

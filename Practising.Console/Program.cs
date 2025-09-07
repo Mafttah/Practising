@@ -80,7 +80,7 @@ var kutuphane = new List<Kitap>
     new Kitap("Royal Ranger", "John Flanagan", 150),
 };
 
-Kutuphane.KutuphaneyiGoster(kutuphane);
+//Kutuphane.KutuphaneyiGoster(kutuphane);
 
 Console.WriteLine("\nAlistirma 7\n");
 
@@ -118,7 +118,22 @@ servis.UrunKaydet3("Ayakkabi", 100, 90000);
 
 
 
-Console.WriteLine("\nAlistirma 10");
+Console.WriteLine("\nAlistirma 10\n");
+
+var musteri = new Musteri { MusteriAdiSoyadi = "Bora Saglam\n" };
+
+var urun1 = new Urun { UrunAdi = "Masa", Fiyat = 900m };
+var urun2 = new Urun { UrunAdi = "Bilgisayar", Fiyat = 2000m };
+var urun3 = new Urun { UrunAdi = "Çanta", Fiyat = 500m };
+
+var siparis = new Siparis
+{
+    SiparisNo = 2376980,
+    SiparisiVerenMusteri = musteri,
+    Urunler = new List<Urun> { urun1, urun2, urun3 }
+};
+
+siparis.SiparisOzetiniYazdir();
 
 
 
